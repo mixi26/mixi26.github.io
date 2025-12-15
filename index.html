@@ -1,77 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="description" content="Max Guida - Portfolio">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Max Guida | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://unpkg.com/scrollreveal"></script>
+    
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link href="css/style.css" rel="stylesheet" />
 </head>
-<body>
 
-    <nav>
-        <div class="logo">MG</div>
-        <ul class="nav-links">
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#extras">Extras</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+<body id="top" class="bg-gray-50">
+
+    <nav id="nav-on-scroll" class="fixed hidden md:block w-full p-4 text-gray-900 z-40 bg-green-300 bg-opacity-95 shadow-md">
+        <div class="w-12/12 lg:w-9/12 mx-auto">
+            <a href="#top" class="kill-link-style xl:mr-6">
+                <span class="inline-block animate__animated animate__fadeInDown rounded-md border-4 border-gray-900 text-gray-900 p-2 text-2xl font-extrabold">MG</span>
+            </a>
+            <a href="#projects" class="inline-block animate__animated animate__fadeInDown ml-6 mr-3 text-2xl font-extrabold cursor-pointer hover:underline">Projects</a>
+            <a href="#extras" class="inline-block animate__animated animate__fadeInDown ml-6 mr-3 text-2xl font-extrabold cursor-pointer hover:underline">Extras</a>
+            <span onclick="toggleContactMe('show')" class="inline-block animate__animated animate__flipInX ml-6 float-right text-2xl cursor-pointer border-4 rounded-md px-4 p-2 border-gray-900 hover:bg-gray-900 hover:text-gray-50 font-extrabold">Contact Me</span>
+        </div>
     </nav>
 
-    <section id="hero" class="container">
-        <div class="hero-content">
-            <h1 class="headline">Hey, I'm Max.</h1>
-            <p class="sub-headline">Here, you can check out what I'm working on. :)</p>
-        </div>
-    </section>
-
-    <section id="projects" class="container">
-        <h2 class="section-title">My Projects</h2>
-        <div class="grid">
+    <div id="contact-me-pane" class="fixed hidden top-0 left-0 h-full w-full bg-gray-900 text-gray-50 z-50 overflow-y-auto p-10">
+        <div class="max-w-3xl mx-auto relative">
+            <div class="absolute top-0 right-0 cursor-pointer" onclick="toggleContactMe('hide')">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-14 w-14" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+            </div>
+            <h2 class="text-5xl font-extrabold mb-10">Contact Me</h2>
             
-            <div class="card">
-                <div class="card-image" style="background-color: #3498db;"></div> <div class="card-text">
-                    <h3>Project Name</h3>
-                    <p>A brief description of the project goes here.</p>
-                    <a href="#">View Project &rarr;</a>
+            <form action="https://formspree.io/f/YOUR_FORM_ID_HERE" method="POST" class="text-left">
+                <label class="text-2xl font-bold">Your Name</label>
+                <input type="text" name="name" class="w-full mt-2 p-4 rounded-md text-gray-900 mb-6" placeholder="Enter name" required />
+                
+                <label class="text-2xl font-bold">Your Email</label>
+                <input type="email" name="email" class="w-full mt-2 p-4 rounded-md text-gray-900 mb-6" placeholder="Enter email" required />
+                
+                <label class="text-2xl font-bold">Your Message</label>
+                <textarea name="message" class="w-full mt-2 p-4 rounded-md text-gray-900 mb-6 h-40" placeholder="Type your message..."></textarea>
+                
+                <button type="submit" class="border-4 border-white px-6 py-2 text-2xl font-extrabold rounded-md hover:bg-white hover:text-gray-900 transition">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+    <nav class="block md:hidden fixed top-4 right-4 z-50">
+        <div onclick="toggleMobileNav()" class="bg-gray-100 p-2 rounded-full shadow-lg cursor-pointer">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+        </div>
+    </nav>
+    
+    <div id="mobile-nav" class="fixed inset-0 bg-gray-100 z-40 hidden flex-col items-center justify-center space-y-8">
+        <div onclick="toggleMobileNav()" class="absolute top-4 right-4 cursor-pointer">
+             <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+        </div>
+        <a href="#projects" onclick="toggleMobileNav()" class="text-4xl font-extrabold underline">Projects</a>
+        <a href="#extras" onclick="toggleMobileNav()" class="text-4xl font-extrabold underline">Extras</a>
+        <span onclick="toggleMobileNav(); toggleContactMe('show')" class="text-3xl font-extrabold border-4 border-gray-900 px-4 py-2 rounded-md">Contact Me</span>
+    </div>
+
+    <div class="pt-20 pb-20 text-center container mx-auto px-4">
+        <div class="mt-10">
+            <div class="mx-auto h-64 w-64 md:h-80 md:w-80 rounded-full border-8 border-gray-900 overflow-hidden shadow-xl">
+                <img src="https://via.placeholder.com/400" alt="Max Guida" class="h-full w-full object-cover">
+            </div>
+            
+            <div class="animate__animated animate__fadeInUp mt-10 text-4xl lg:text-6xl font-extrabold text-gray-900">
+                Hey, I'm <span class="text-green-500">Max Guida.</span><br>
+                <span class="text-2xl lg:text-3xl text-gray-600 block mt-4">This is my new portfolio site built on GitHub Pages.</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="p-10 bg-gray-900 text-gray-50 text-center">
+        <h2 class="text-4xl md:text-6xl font-extrabold mb-10">Featured Work</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <a href="#" class="block transform hover:-translate-y-2 transition duration-300">
+                <div class="h-48 bg-green-400 rounded-t-lg"></div> <div class="p-6 bg-white text-gray-900 rounded-b-lg">
+                    <h3 class="text-2xl font-extrabold">Project One</h3>
+                    <p class="font-bold text-gray-600">Short description here.</p>
                 </div>
+            </a>
+            <a href="#" class="block transform hover:-translate-y-2 transition duration-300">
+                <div class="h-48 bg-purple-400 rounded-t-lg"></div> <div class="p-6 bg-white text-gray-900 rounded-b-lg">
+                    <h3 class="text-2xl font-extrabold">Project Two</h3>
+                    <p class="font-bold text-gray-600">Short description here.</p>
+                </div>
+            </a>
+            <a href="#" class="block transform hover:-translate-y-2 transition duration-300">
+                <div class="h-48 bg-blue-400 rounded-t-lg"></div> <div class="p-6 bg-white text-gray-900 rounded-b-lg">
+                    <h3 class="text-2xl font-extrabold">Project Three</h3>
+                    <p class="font-bold text-gray-600">Short description here.</p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div id="projects" class="p-10 bg-gray-50 text-gray-900 text-center">
+        <h2 class="text-4xl md:text-6xl font-extrabold mb-4">My Projects</h2>
+        <p class="text-2xl font-bold mb-10">Here is what I've been working on.</p>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            
+            <div class="bg-white border-4 border-gray-900 rounded-lg p-6 hover:shadow-xl transition transform hover:-translate-y-1 cursor-pointer">
+                <img src="https://via.placeholder.com/100" class="mx-auto h-16 w-16 mb-4 rounded-full">
+                <h3 class="text-2xl font-extrabold">Small App</h3>
+                <p class="text-lg font-bold text-gray-600">React & Node.js</p>
             </div>
 
-            <div class="card">
-                <div class="card-image" style="background-color: #e74c3c;"></div>
-                <div class="card-text">
-                    <h3>Another App</h3>
-                    <p>Building tools for the future of web dev.</p>
-                    <a href="#">View Project &rarr;</a>
-                </div>
+             <div class="bg-white border-4 border-gray-900 rounded-lg p-6 hover:shadow-xl transition transform hover:-translate-y-1 cursor-pointer">
+                <img src="https://via.placeholder.com/100" class="mx-auto h-16 w-16 mb-4 rounded-full">
+                <h3 class="text-2xl font-extrabold">Website Design</h3>
+                <p class="text-lg font-bold text-gray-600">UI/UX Study</p>
             </div>
 
-             <div class="card">
-                <div class="card-image" style="background-color: #2ecc71;"></div>
-                <div class="card-text">
-                    <h3>Design Work</h3>
-                    <p>A collection of my UI/UX experiments.</p>
-                    <a href="#">View Project &rarr;</a>
-                </div>
+             <div class="bg-white border-4 border-gray-900 rounded-lg p-6 hover:shadow-xl transition transform hover:-translate-y-1 cursor-pointer">
+                <img src="https://via.placeholder.com/100" class="mx-auto h-16 w-16 mb-4 rounded-full">
+                <h3 class="text-2xl font-extrabold">Game Dev</h3>
+                <p class="text-lg font-bold text-gray-600">Unity C#</p>
             </div>
 
         </div>
-    </section>
+    </div>
 
-    <section id="contact" class="container">
-        <h2 class="section-title">Contact Me</h2>
-        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" placeholder="Your Message" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-    </section>
+    <div class="bg-gray-200 text-center p-6">
+        <p class="text-xl font-extrabold text-gray-900">&copy; 2025 Max Guida.</p>
+    </div>
 
-    <footer>
-        <p>&copy; 2025 Max Guida. All Rights Reserved.</p>
-    </footer>
-
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
