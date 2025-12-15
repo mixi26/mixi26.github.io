@@ -2,16 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Max Guida - Portfolio">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Max Guida | Portfolio</title>
-    
     <script src="https://cdn.tailwindcss.com"></script>
-    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    
     <link href="css/style.css" rel="stylesheet" />
-
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 
@@ -20,16 +15,16 @@
     <nav id="nav-on-scroll" class="fixed hidden md:block w-full p-4 z-40 bg-lime-300 bg-opacity-95 shadow-md transition-all duration-300">
         <div class="w-11/12 lg:w-9/12 mx-auto flex justify-between items-center">
             
-            <a href="#top" class="no-underline">
+            <a href="index.html" class="no-underline">
                 <span class="inline-block animate__animated animate__fadeInDown rounded-md border-4 border-gray-900 text-gray-900 p-2 text-2xl font-extrabold">
                     MCTG
                 </span>
             </a>
 
             <div>
-                <a href="#projects" class="inline-block animate__animated animate__fadeInDown ml-6 text-2xl font-extrabold cursor-pointer underline--magical">Projects</a>
-                <a href="#photography" class="inline-block animate__animated animate__fadeInDown ml-6 text-2xl font-extrabold cursor-pointer underline--magical">Photography</a>
-                <a href="#music" class="inline-block animate__animated animate__fadeInDown ml-6 text-2xl font-extrabold cursor-pointer underline--magical">Music</a>
+                <a href="projects.html" class="inline-block animate__animated animate__fadeInDown ml-6 text-2xl font-extrabold cursor-pointer underline--magical">Projects</a>
+                <a href="photography.html" class="inline-block animate__animated animate__fadeInDown ml-6 text-2xl font-extrabold cursor-pointer underline--magical">Photography</a>
+                <a href="music.html" class="inline-block animate__animated animate__fadeInDown ml-6 text-2xl font-extrabold cursor-pointer underline--magical">Music</a>
                 
                 <span onclick="toggleContactMe('show')" class="inline-block animate__animated animate__flipInX ml-6 text-2xl cursor-pointer border-4 rounded-md px-4 p-2 border-gray-900 hover:bg-gray-900 hover:text-white transition font-extrabold">
                     Contact Me
@@ -38,7 +33,7 @@
         </div>
     </nav>
 
-    <div id="contact-me-pane" class="fixed z-50 w-full md:w-11/12 left-0 right-0 mx-auto bg-gray-900 text-white p-10 rounded-t-xl shadow-2xl transition-all duration-500 ease-in-out contact-me-inactive h-[85vh] overflow-y-auto">
+    <div id="contact-me-pane" class="fixed hidden z-50 w-full md:w-11/12 left-0 right-0 mx-auto bg-gray-900 text-white p-10 rounded-t-xl shadow-2xl transition-all duration-500 ease-in-out contact-me-inactive h-[85vh] overflow-y-auto">
         <div class="max-w-3xl mx-auto relative">
             <div class="absolute top-0 right-0 cursor-pointer hover:text-lime-400 transition" onclick="toggleContactMe('hide')">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-14 w-14" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
@@ -73,9 +68,9 @@
         <div onclick="toggleMobileNav()" class="absolute top-4 right-4 cursor-pointer">
              <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
         </div>
-        <a href="#projects" onclick="toggleMobileNav()" class="text-4xl font-extrabold underline">Projects</a>
-        <a href="#photography" onclick="toggleMobileNav()" class="text-4xl font-extrabold underline">Photography</a>
-        <a href="#music" onclick="toggleMobileNav()" class="text-4xl font-extrabold underline">Music</a>
+        <a href="projects.html" class="text-4xl font-extrabold underline">Projects</a>
+        <a href="photography.html" class="text-4xl font-extrabold underline">Photography</a>
+        <a href="music.html" class="text-4xl font-extrabold underline">Music</a>
         <span onclick="toggleMobileNav(); toggleContactMe('show')" class="text-3xl font-extrabold border-4 border-gray-900 px-4 py-2 rounded-md">Contact Me</span>
     </div>
 
@@ -92,26 +87,31 @@
         </div>
     </div>
 
-    <div id="projects" class="py-20 bg-gray-50 text-gray-900 text-center">
+    <div class="py-20 bg-gray-50 text-gray-900 text-center">
         <div class="max-w-6xl mx-auto px-4">
-            <h2 class="text-4xl md:text-6xl font-extrabold mb-4">My Projects</h2>
-            <p class="text-2xl font-bold mb-10 text-gray-600">What I've been working on (not much clearly)</p>
-            
-            </div>
+            <h2 class="text-4xl md:text-6xl font-extrabold mb-4">
+                <a href="projects.html" class="hover:text-lime-600 transition underline--magical">My Projects</a>
+            </h2>
+            <p class="text-2xl font-bold mb-10 text-gray-600">Click above to see what I've been working on</p>
+        </div>
     </div>
 
-    <div id="photography" class="py-20 bg-gray-900 text-white text-center">
+    <div class="py-20 bg-gray-900 text-white text-center">
         <div class="max-w-6xl mx-auto px-4">
-            <h2 class="text-4xl md:text-6xl font-extrabold mb-4">My Portfolio</h2>
-            <p class="text-2xl font-bold mb-10 opacity-80">Some photos I have taken</p>
-            </div>
+            <h2 class="text-4xl md:text-6xl font-extrabold mb-4">
+                <a href="photography.html" class="hover:text-lime-400 transition underline--magical">My Portfolio</a>
+            </h2>
+            <p class="text-2xl font-bold mb-10 opacity-80">Click above to view my photos</p>
+        </div>
     </div>
     
-    <div id="music" class="py-20 bg-gray-50 text-gray-900 text-center">
+    <div class="py-20 bg-gray-50 text-gray-900 text-center">
         <div class="max-w-6xl mx-auto px-4">
-            <h2 class="text-4xl md:text-6xl font-extrabold mb-4">My Music</h2>
-            <p class="text-2xl font-bold mb-10 text-gray-600">Washed piano diploma holder</p>
-            </div>
+            <h2 class="text-4xl md:text-6xl font-extrabold mb-4">
+                <a href="music.html" class="hover:text-lime-600 transition underline--magical">My Music</a>
+            </h2>
+            <p class="text-2xl font-bold mb-10 text-gray-600">Click above to hear my washed piano skills</p>
+        </div>
     </div>
     
     <div class="bg-gray-200 text-center p-8">
@@ -120,32 +120,5 @@
 
     <script src="js/script.js"></script>
     <script>
-        // Inline script to ensure the contact pane works immediately
         function toggleContactMe(action) {
-            const pane = document.getElementById('contact-me-pane');
-            if (action === 'show') {
-                pane.classList.remove('hidden');
-                pane.classList.remove('contact-me-inactive');
-                pane.classList.add('contact-me-active');
-                document.body.style.overflow = 'hidden'; 
-            } else {
-                pane.classList.add('hidden'); // Ensure it hides for mobile
-                pane.classList.remove('contact-me-active');
-                pane.classList.add('contact-me-inactive');
-                document.body.style.overflow = 'auto';
-            }
-        }
-
-        function toggleMobileNav() {
-            const nav = document.getElementById('mobile-nav');
-            if (nav.classList.contains('hidden')) {
-                nav.classList.remove('hidden');
-                nav.classList.add('flex');
-            } else {
-                nav.classList.add('hidden');
-                nav.classList.remove('flex');
-            }
-        }
-    </script>
-</body>
-</html>
+            const pane = document.getElementById('contact-me-pane
