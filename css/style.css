@@ -1,0 +1,39 @@
+/* Custom Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Utilities not in Tailwind */
+.col-centered {
+    float: none;
+    margin: 0 auto;
+}
+
+.kill-link-style {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* The "Magical" Underline Effect */
+.underline--magical {
+    background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 0.2em;
+    background-position: 0 88%;
+    transition: background-size 0.25s ease-in;
+}
+
+.underline--magical:hover {
+    background-size: 100% 88%;
+}
+
+/* Scrollbar styling for the contact pane */
+#contact-me-pane::-webkit-scrollbar {
+    width: 10px;
+}
+#contact-me-pane::-webkit-scrollbar-thumb {
+    background: #4ade80; 
+    border-radius: 5px;
+}
