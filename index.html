@@ -15,9 +15,6 @@
 
     <nav id="nav-on-scroll" class="fixed hidden md:block w-full p-4 text-gray-900 z-40 bg-green-300 bg-opacity-95 shadow-md">
         <div class="w-12/12 lg:w-9/12 mx-auto">
-            <a href="#top" class="kill-link-style xl:mr-6">
-                <span class="inline-block animate__animated animate__fadeInDown rounded-md border-4 border-gray-900 text-gray-900 p-2 text-2xl font-extrabold">MG</span>
-            </a>
             <a href="#projects" class="inline-block animate__animated animate__fadeInDown ml-6 mr-3 text-2xl font-extrabold cursor-pointer hover:underline">Projects</a>
             <a href="#extras" class="inline-block animate__animated animate__fadeInDown ml-6 mr-3 text-2xl font-extrabold cursor-pointer hover:underline">Extras</a>
             <span onclick="toggleContactMe('show')" class="inline-block animate__animated animate__flipInX ml-6 float-right text-2xl cursor-pointer border-4 rounded-md px-4 p-2 border-gray-900 hover:bg-gray-900 hover:text-gray-50 font-extrabold">Contact Me</span>
@@ -57,7 +54,8 @@
              <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
         </div>
         <a href="#projects" onclick="toggleMobileNav()" class="text-4xl font-extrabold underline">Projects</a>
-        <a href="#extras" onclick="toggleMobileNav()" class="text-4xl font-extrabold underline">Extras</a>
+        <a href="#photography" onclick="toggleMobileNav()" class="text-4xl font-extrabold underline">Photography</a>
+        <a href="#music" onclick="toggleMobileNav()" class="text-4xl font-extrabold underline">Music</a>
         <span onclick="toggleMobileNav(); toggleContactMe('show')" class="text-3xl font-extrabold border-4 border-gray-900 px-4 py-2 rounded-md">Contact Me</span>
     </div>
 
@@ -68,12 +66,12 @@
             </div>
             
             <div class="animate__animated animate__fadeInUp mt-10 text-4xl lg:text-6xl font-extrabold text-gray-900">
-                Hey, I'm <span class="text-green-500">Max Guida.</span><br>
-                <span class="text-2xl lg:text-3xl text-gray-600 block mt-4">This is my new portfolio site built on GitHub Pages.</span>
+                Hey, I'm <span class="text-green-500">Max.</span><br>
+                <span class="text-2xl lg:text-3xl text-gray-600 block mt-4">This is where I'll dump anything I'm currently working on or find interesting!</span>
             </div>
         </div>
     </div>
-
+<!--
     <div class="p-10 bg-gray-900 text-gray-50 text-center">
         <h2 class="text-4xl md:text-6xl font-extrabold mb-10">Featured Work</h2>
         
@@ -98,11 +96,11 @@
             </a>
         </div>
     </div>
-
+-->
     <div id="projects" class="p-10 bg-gray-50 text-gray-900 text-center">
         <h2 class="text-4xl md:text-6xl font-extrabold mb-4">My Projects</h2>
         <p class="text-2xl font-bold mb-10">Here is what I've been working on.</p>
-
+<!--
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
             
             <div class="bg-white border-4 border-gray-900 rounded-lg p-6 hover:shadow-xl transition transform hover:-translate-y-1 cursor-pointer">
@@ -122,12 +120,22 @@
                 <h3 class="text-2xl font-extrabold">Game Dev</h3>
                 <p class="text-lg font-bold text-gray-600">Unity C#</p>
             </div>
-
+-->
+        </div>
+    <div id="photography" class="p-10 bg-gray-50 text-gray-900 text-center">
+        <h2 class="text-4xl md:text-6xl font-extrabold mb-4">My Portfolio</h2>
+        <p class="text-2xl font-bold mb-10">Some photos I have taken.</p>
         </div>
     </div>
-
+    
+    <div id="music" class="p-10 bg-gray-50 text-gray-900 text-center">
+        <h2 class="text-4xl md:text-6xl font-extrabold mb-4">Music</h2>
+        <p class="text-2xl font-bold mb-10">Washed piano diploma holder</p>
+        </div>
+    </div>
+    
     <div class="bg-gray-200 text-center p-6">
-        <p class="text-xl font-extrabold text-gray-900">&copy; 2025 Max Guida.</p>
+        <p class="text-xl font-extrabold text-gray-900">&copy; 2025 Max Guida</p>
     </div>
 
     <script src="js/script.js"></script>
