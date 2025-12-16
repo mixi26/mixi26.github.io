@@ -649,13 +649,17 @@ html {
 }
 
 /* =========================================
-   3. THE LIME GREEN THEME (Edited)
+   3. THE THEME
    ========================================= */
 
-/* The Main "Magical" Underline */
+body {
+    font-family: 'Libre Baskerville', serif;
+    line-height: 1.8; 
+}
+
+/* The Main Underline */
 .underline--magical {
-    /* EDITED: Changed from Teal to Light Lime Green Gradient */
-    background-image: linear-gradient(120deg, #bef264 0%, #a3e635 100%);
+    background-image: linear-gradient(120deg, #fcd34d 0%, #d97706 100%);
     
     background-repeat: no-repeat;
     background-size: 100% 0.25em;
@@ -670,7 +674,7 @@ html {
     padding-top: 3px;
 }
 
-/* Secondary Underline (Usually for extras) */
+/* Secondary Underline */
 .underline--magical-2 {
     background-image: linear-gradient(120deg, #FDE68A 0%, #FDE68A 100%);
     background-repeat: no-repeat;
@@ -680,6 +684,10 @@ html {
     padding-right: 7px;
     padding-left: 3px;
     padding-top: -20px;
+}
+
+h1, h2, h3 {
+    letter-spacing: -0.02em; 
 }
 
 .underline--magical-2:hover {
