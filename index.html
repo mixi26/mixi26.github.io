@@ -43,7 +43,7 @@
 
     <div id="contact-me-pane" class="fixed hidden z-50 w-full md:w-11/12 left-0 right-0 mx-auto bg-gray-900 text-white p-10 rounded-t-xl shadow-2xl transition-all duration-500 ease-in-out contact-me-inactive h-[85vh] overflow-y-auto">
         <div class="max-w-3xl mx-auto relative">
-            <div class="absolute top-0 right-0 cursor-pointer hover:text-lime-600 transition" onclick="toggleContactMe('hide')">
+            <div class="absolute top-0 right-0 cursor-pointer hover:text-lime-400 transition" onclick="toggleContactMe('hide')">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-14 w-14" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
             </div>
             <h2 class="text-5xl font-extrabold mb-10 mt-10">Contact Me</h2>
@@ -142,22 +142,17 @@
             
             if (action === 'show') {
                 pane.classList.remove('hidden');
-
                 setTimeout(() => {
                     pane.classList.remove('contact-me-inactive');
                     pane.classList.add('contact-me-active');
                 }, 20);
-                
                 document.body.style.overflow = 'hidden'; 
-
             } else {
                 pane.classList.remove('contact-me-active');
                 pane.classList.add('contact-me-inactive');
-
                 setTimeout(() => {
                     pane.classList.add('hidden');
                 }, 500);
-                
                 document.body.style.overflow = 'auto';
             }
         }
