@@ -653,13 +653,13 @@ html {
    ========================================= */
 
 body {
-    font-family: 'Libre Baskerville', serif;
-    line-height: 1.8; 
+    font-family: 'DM Sans', sans-serif;
+    letter-spacing: -0.02em;
 }
 
 /* The Main Underline */
 .underline--magical {
-    background-image: linear-gradient(120deg, #fcd34d 0%, #d97706 100%);
+    background-image: linear-gradient(120deg, #bef264 0%, #a3e635 100%);
     
     background-repeat: no-repeat;
     background-size: 100% 0.25em;
@@ -667,6 +667,7 @@ body {
     transition: background-size 0.2s ease-in;
     padding-right: 7px;
     padding-left: 3px;
+    text-decoration: none;
 }
 
 .underline--magical:hover {
