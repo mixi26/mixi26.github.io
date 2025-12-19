@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
     <title>Max Guida | Portfolio</title>
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
@@ -13,134 +15,124 @@
 </head>
 
 <body id="top" class="bg-neutral-950 text-gray-200 font-sans pb-40">
-
-    <nav id="nav-on-scroll" class="fixed hidden md:block w-full p-4 z-40 bg-neutral-900 bg-opacity-95 shadow-md border-b border-neutral-800 transition-all duration-300">
+    <nav id="nav-on-scroll" class="fixed hidden md:block w-full p-4 z-40 bg-lime-300 bg-opacity-95 shadow-md transition-all duration-300">
         <div class="w-11/12 lg:w-9/12 mx-auto flex justify-between items-center">
             
-            <div class="flex items-center space-x-8">
-                <a href="projects.html" class="animate__animated animate__fadeInDown text-lg font-bold cursor-pointer hover:text-amber-400 transition tracking-wide">
-                    PROJECTS
-                </a>
-                <a href="photography.html" class="animate__animated animate__fadeInDown text-lg font-bold cursor-pointer hover:text-amber-400 transition tracking-wide">
-                    PHOTOGRAPHY
-                </a>
-                <a href="music.html" class="animate__animated animate__fadeInDown text-lg font-bold cursor-pointer hover:text-amber-400 transition tracking-wide">
-                    MUSIC
-                </a>
-            </div>
+            <a href="index.html" class="no-underline">
+                <span class="inline-block animate__animated animate__fadeInDown rounded-md border-4 border-gray-900 text-gray-900 p-2 text-2xl font-extrabold">
+                    max
+                </span>
+            </a>
 
             <div>
-                <span onclick="toggleContactMe('show')" class="inline-block animate__animated animate__flipInX text-lg cursor-pointer border border-amber-500 text-amber-500 rounded px-6 py-2 hover:bg-amber-500 hover:text-neutral-900 transition font-bold tracking-wide">
-                    CONTACT
+                <a href="projects.html" class="inline-block animate__animated animate__fadeInDown ml-6 text-2xl font-extrabold cursor-pointer underline--magical">Projects</a>
+                <a href="photography.html" class="inline-block animate__animated animate__fadeInDown ml-6 text-2xl font-extrabold cursor-pointer underline--magical">Photography</a>
+                <a href="music.html" class="inline-block animate__animated animate__fadeInDown ml-6 text-2xl font-extrabold cursor-pointer underline--magical">Music</a>
+                
+                <span onclick="toggleContactMe('show')" class="inline-block animate__animated animate__flipInX ml-6 text-2xl cursor-pointer border-4 rounded-md px-4 p-2 border-gray-900 hover:bg-gray-900 hover:text-white transition font-extrabold">
+                    Contact Me
                 </span>
             </div>
-            
         </div>
     </nav>
 
-    <div id="contact-me-pane" class="fixed hidden z-50 w-full md:w-11/12 left-0 right-0 mx-auto bg-neutral-900 text-white p-10 rounded-t-xl shadow-2xl transition-all duration-500 ease-in-out contact-me-inactive h-[85vh] overflow-y-auto border-t border-amber-500">
+    <div id="contact-me-pane" class="transform fixed hidden z-50 w-full md:w-11/12 left-0 right-0 mx-auto bg-gray-900 text-white p-10 rounded-t-xl shadow-2xl transition-all duration-500 ease-in-out contact-me-inactive h-[85vh] overflow-y-auto">
         <div class="max-w-3xl mx-auto relative">
-            <div class="absolute top-0 right-0 cursor-pointer hover:text-amber-500 transition" onclick="toggleContactMe('hide')">
+            <div class="absolute top-0 right-0 cursor-pointer hover:text-lime-400 transition" onclick="toggleContactMe('hide')">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-14 w-14" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
             </div>
-            <h2 class="text-5xl font-extrabold mb-10 mt-10 text-amber-500">Contact Me</h2>
+            <h2 class="text-5xl font-extrabold mb-10 mt-10">Contact</h2>
             
-            <form action="https://formspree.io/f/YOUR_ID_HERE" method="POST" class="text-left space-y-6">
+            <form action="https://formspree.io/f/xeoyblea" method="POST" class="text-left space-y-6">
                 <div>
-                    <label class="text-xl font-bold text-gray-400">Your Name</label>
-                    <input type="text" name="name" class="w-full mt-2 p-4 rounded bg-neutral-800 border border-neutral-700 text-white focus:border-amber-500 focus:outline-none transition" placeholder="Enter name" required />
+                    <label class="text-2xl font-bold">Your Name:</label>
+                    <input type="text" name="name" class="w-full mt-2 p-4 rounded-md text-gray-900 font-bold text-xl" placeholder="Enter name" required />
                 </div>
                 <div>
-                    <label class="text-xl font-bold text-gray-400">Your Email</label>
-                    <input type="email" name="email" class="w-full mt-2 p-4 rounded bg-neutral-800 border border-neutral-700 text-white focus:border-amber-500 focus:outline-none transition" placeholder="Enter email" required />
+                    <label class="text-2xl font-bold">Your Email:</label>
+                    <input type="email" name="email" class="w-full mt-2 p-4 rounded-md text-gray-900 font-bold text-xl" placeholder="Enter email" required />
                 </div>
                 <div>
-                    <label class="text-xl font-bold text-gray-400">Your Message</label>
-                    <textarea name="message" class="w-full mt-2 p-4 rounded bg-neutral-800 border border-neutral-700 text-white h-40 focus:border-amber-500 focus:outline-none transition" placeholder="Type your message..."></textarea>
+                    <label class="text-2xl font-bold">Your Message:</label>
+                    <textarea name="message" class="w-full mt-2 p-4 rounded-md text-gray-900 font-bold text-xl h-40" placeholder="Type your message..."></textarea>
                 </div>
-                <button type="submit" class="bg-amber-500 text-neutral-900 px-8 py-3 text-xl font-extrabold rounded hover:bg-amber-400 transition">Send Message</button>
+                <button type="submit" class="border-4 border-white px-8 py-3 text-2xl font-extrabold rounded-md hover:bg-white hover:text-gray-900 transition">Send Message</button>
             </form>
         </div>
     </div>
 
     <nav class="block md:hidden fixed top-4 right-4 z-50">
-        <div onclick="toggleMobileNav()" class="bg-neutral-800 p-2 rounded-full shadow-lg cursor-pointer border border-neutral-700">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+        <div onclick="toggleMobileNav()" class="bg-gray-100 p-2 rounded-full shadow-lg cursor-pointer">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
         </div>
     </nav>
-    <div id="mobile-nav" class="fixed inset-0 z-40 hidden flex-col items-center justify-center space-y-8 text-white">
+    
+    <div id="mobile-nav" class="fixed inset-0 bg-gray-100 z-40 hidden flex-col items-center justify-center space-y-8">
         <div onclick="toggleMobileNav()" class="absolute top-4 right-4 cursor-pointer">
              <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
         </div>
-        <a href="projects.html" class="text-3xl font-bold tracking-widest hover:text-amber-500">PROJECTS</a>
-        <a href="photography.html" class="text-3xl font-bold tracking-widest hover:text-amber-500">PHOTOGRAPHY</a>
-        <a href="music.html" class="text-3xl font-bold tracking-widest hover:text-amber-500">MUSIC</a>
-        <span onclick="toggleMobileNav(); toggleContactMe('show')" class="text-2xl border border-amber-500 text-amber-500 px-6 py-2 rounded">Contact Me</span>
+        <a href="projects.html" class="text-4xl font-extrabold underline">Projects</a>
+        <a href="photography.html" class="text-4xl font-extrabold underline">Photography</a>
+        <a href="music.html" class="text-4xl font-extrabold underline">Music</a>
+        <span onclick="toggleMobileNav(); toggleContactMe('show')" class="text-3xl font-extrabold border-4 border-gray-900 px-4 py-2 rounded-md">Contact Me</span>
     </div>
 
-    <div class="pt-40 pb-20 text-center container mx-auto px-4">
+    <div class="pt-32 pb-20 text-center container mx-auto px-4">
         <div class="mt-10">
-            <div class="mx-auto h-64 w-64 md:h-80 md:w-80 rounded-full border-4 border-neutral-800 overflow-hidden shadow-2xl">
-                <img src="img/profile.jpg" alt="Max Guida" class="h-full w-full object-cover">
+            <div class="mx-auto h-64 w-64 md:h-80 md:w-80 rounded-full border-8 border-gray-900 overflow-hidden shadow-xl">
+                <img src="img/Snapchat-802212614.jpg" alt="Max Guida" class="h-full w-full object-cover">
             </div>
             
-            <div class="animate__animated animate__fadeInUp mt-10 text-4xl lg:text-6xl font-extrabold text-white leading-tight">
+            <div class="animate__animated animate__fadeInUp mt-10 text-4xl lg:text-6xl font-extrabold text-gray-900 leading-tight">
                 Hey, I'm 
                 <a href="https://www.thecomet.net/news/22466036.hitchin-school-student-wins-four-music-awards-24-hours/" 
                    target="_blank" 
-                   class="text-amber-500 underline--magical hover:text-amber-400 transition">
+                   class="text-lime-600 animate__animated animate__fadeInDown cursor-pointer underline--magical">
                    Max</a>.<br>
-                <span class="text-xl lg:text-2xl text-gray-400 block mt-6 font-medium max-w-2xl mx-auto">
-                    This is where I'll dump anything I'm currently working on or find interesting.
-                </span>
-            </div>
-
-            <div class="mt-10 animate__animated animate__fadeInUp delay2">
-                <a href="documents/Your_CV_Name.pdf" target="_blank" class="inline-flex items-center px-8 py-3 border border-transparent text-lg font-bold rounded-md text-neutral-900 bg-white hover:bg-gray-200 transition shadow-lg">
-                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
-                    Download CV
-                </a>
+                <span class="text-2xl lg:text-3xl text-gray-600 block mt-6 font-bold">This is where I'll dump anything I'm currently working on or find interesting!</span>
             </div>
         </div>
     </div>
 
-    <div class="py-20 bg-neutral-900 text-center">
+    <div class="py-20 bg-gray-50 text-gray-900 text-center">
         <div class="max-w-6xl mx-auto px-4">
-            <h2 class="text-4xl md:text-5xl font-extrabold mb-4">
-                <a href="projects.html" class="text-white hover:text-amber-500 transition underline--magical">My Projects</a>
+            <h2 class="text-4xl md:text-6xl font-extrabold mb-4">
+                <a href="projects.html" class="text-lime-600 animate__animated animate__fadeInDown cursor-pointer underline--magical">My Projects</a>
             </h2>
-            <p class="text-xl text-gray-500 mb-10">Click above to see what I've been working on</p>
+            <p class="text-2xl font-bold mb-10 text-gray-600">Click above to see what I've been working on</p>
         </div>
     </div>
 
-    <div class="py-20 bg-neutral-950 text-center">
+    <div class="py-20 bg-gray-900 text-white text-center">
         <div class="max-w-6xl mx-auto px-4">
-            <h2 class="text-4xl md:text-5xl font-extrabold mb-4">
-                <a href="photography.html" class="text-white hover:text-amber-500 transition underline--magical">My Portfolio</a>
+            <h2 class="text-4xl md:text-6xl font-extrabold mb-4">
+                <a href="photography.html" class="text-lime-600 animate__animated animate__fadeInDown cursor-pointer underline--magical">My Portfolio</a>
             </h2>
-            <p class="text-xl text-gray-500 mb-10">Click above to view my photos</p>
+            <p class="text-2xl font-bold mb-10 opacity-80">Click above to view my photos</p>
         </div>
     </div>
     
-    <div class="py-20 bg-neutral-900 text-center">
+    <div class="py-20 bg-gray-50 text-gray-900 text-center">
         <div class="max-w-6xl mx-auto px-4">
-            <h2 class="text-4xl md:text-5xl font-extrabold mb-4">
-                <a href="music.html" class="text-white hover:text-amber-500 transition underline--magical">My Music</a>
+            <h2 class="text-4xl md:text-6xl font-extrabold mb-4">
+                <a href="music.html" class="text-lime-600 animate__animated animate__fadeInDown cursor-pointer underline--magical">My Music</a>
             </h2>
-            <p class="text-xl text-gray-500 mb-10">Click above to hear my washed piano skills</p>
+            <p class="text-2xl font-bold mb-10 text-gray-600">Click above to hear my washed piano skills</p>
         </div>
     </div>
-    
-    <div class="bg-neutral-950 text-center p-8 border-t border-neutral-900">
-        <p class="text-lg text-gray-500">&copy; 2025 Max Guida</p>
+
+    <div class="bg-gray-200 text-center p-8">
+        <p class="text-xl font-extrabold text-gray-900">&copy; 2025 Max Guida</p>
     </div>
+
+    <div class="h-32 w-full bg-gray-200"></div>
     
-    <footer class="fixed bottom-0 w-full bg-neutral-900 text-white p-4 z-40 text-center border-t border-amber-500 shadow-2xl">
-        <div class="flex justify-center space-x-10 text-2xl">
-            <a href="mailto:max.ct.guida@gmail.com" class="fa fa-envelope hover:text-amber-500 transition transform hover:scale-110"></a>
-            <a href="https://linkedin.com/in/max-guida" target="_blank" class="fa fa-linkedin hover:text-amber-500 transition transform hover:scale-110"></a>
-            <a href="https://github.com/mixi26" target="_blank" class="fa fa-github hover:text-amber-500 transition transform hover:scale-110"></a>
-            <a href="https://instagram.com/mc.guida" target="_blank" class="fa fa-instagram hover:text-amber-500 transition transform hover:scale-110"></a>
+    <footer class="fixed bottom-0 w-full bg-gray-900 text-white p-4 z-40 text-center border-t-4 border-lime-400 shadow-[0_-5px_15px_rgba(0,0,0,0.3)]">
+        <div class="flex justify-center space-x-10 text-3xl">
+            <a href="mailto:max.ct.guida@gmail.com" class="fa fa-envelope hover:text-lime-400 transition transform hover:scale-110"></a>
+            <a href="https://linkedin.com/in/max-guida" target="_blank" class="fa fa-linkedin hover:text-lime-400 transition transform hover:scale-110"></a>
+            <a href="https://github.com/mixi26" target="_blank" class="fa fa-github hover:text-lime-400 transition transform hover:scale-110"></a>
+            <a href="https://instagram.com/mc.guida" target="_blank" class="fa fa-instagram hover:text-lime-400 transition transform hover:scale-110"></a>
         </div>
     </footer>
 
@@ -148,19 +140,33 @@
     <script>
         function toggleContactMe(action) {
             const pane = document.getElementById('contact-me-pane');
+            
             if (action === 'show') {
                 pane.classList.remove('hidden');
-                setTimeout(() => { pane.classList.remove('contact-me-inactive'); pane.classList.add('contact-me-active'); }, 20);
+                setTimeout(() => {
+                    pane.classList.remove('contact-me-inactive');
+                    pane.classList.add('contact-me-active');
+                }, 20);
                 document.body.style.overflow = 'hidden'; 
             } else {
-                pane.classList.remove('contact-me-active'); pane.classList.add('contact-me-inactive');
-                setTimeout(() => { pane.classList.add('hidden'); }, 500);
+                pane.classList.remove('contact-me-active');
+                pane.classList.add('contact-me-inactive');
+                setTimeout(() => {
+                    pane.classList.add('hidden');
+                }, 500);
                 document.body.style.overflow = 'auto';
             }
         }
+
         function toggleMobileNav() {
             const nav = document.getElementById('mobile-nav');
-            if (nav.classList.contains('hidden')) { nav.classList.remove('hidden'); nav.classList.add('flex'); } else { nav.classList.add('hidden'); nav.classList.remove('flex'); }
+            if (nav.classList.contains('hidden')) {
+                nav.classList.remove('hidden');
+                nav.classList.add('flex');
+            } else {
+                nav.classList.add('hidden');
+                nav.classList.remove('flex');
+            }
         }
     </script>
 </body>
